@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Builder Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">Form Builder</div>
+      <div class="actions">
+        <button id="export-json" class="btn ghost">Export JSON</button>
+        <button id="download-html" class="btn primary">Download HTML</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <aside class="panel left">
+        <h3>Field Library</h3>
+        <div class="field-list" id="fieldLibrary">
+          <div class="field-item" data-type="text">Text Input</div>
+          <div class="field-item" data-type="textarea">Textarea</div>
+          <div class="field-item" data-type="number">Number</div>
+          <div class="field-item" data-type="email">Email</div>
+          <div class="field-item" data-type="checkbox">Checkbox</div>
+          <div class="field-item" data-type="radio">Radio Group</div>
+          <div class="field-item" data-type="select">Dropdown</div>
+          <div class="field-item" data-type="date">Date</div>
+        </div>
+
+        <div class="options">
+          <label>Form Title
+            <input id="formTitle" placeholder="Untitled Form" />
+          </label>
+          <label>Form Description
+            <input id="formDesc" placeholder="A short description" />
+          </label>
+        </div>
+      </aside>
+
+      <section class="panel center">
+        <h3>Canvas</h3>
+        <div id="canvas" class="canvas" data-placeholder="Drag fields here or click a field to add.">
+          <div class="placeholder">Drop fields here</div>
+        </div>
+      </section>
+
+      <aside class="panel right">
+        <h3>Inspector</h3>
+        <div id="inspector" class="inspector empty">
+          <div class="empty-text">Select a field to edit its properties</div>
+        </div>
+
+        <div class="preview">
+          <h4>Live Preview</h4>
+          <form id="livePreview"></form>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <small>Made with ♥ — Super Duper CSS edition</small>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
